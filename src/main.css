@@ -1,0 +1,50 @@
+/* 
+
+PAGE COLORS:
+
+#95D5B2
+#52B788
+#40916C
+#74C69D
+#2D6A4F
+#595959
+#333533
+
+
+FONT-COLORS:
+
+#333533
+#dee2e6
+
+
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Kanit', sans-serif;
+  font-size: 62.5%;
+  background-color: #333533;
+  color: #dee2e6;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #dee2e6;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #333533;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
