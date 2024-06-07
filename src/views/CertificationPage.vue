@@ -33,22 +33,22 @@
 
 <script>
 import { ref } from 'vue';
-import useAnimation from '../mixins/animation';
-import BaseBackground from '../components/UI/BaseBackground.vue';
-import BaseCard from '../components/UI/BaseCard.vue';
+import useAnimation from '../../mixins/animation';
+import BaseBackground from '../UI/BaseBackground.vue';
+import BaseCard from '../UI/BaseCard.vue';
 
 export default {
   name: 'CertificationSection',
   components: {
-    'base-background': BaseBackground,
-    'base-card': BaseCard
+    BaseBackground,
+    BaseCard
   },
   setup() {
     const { show } = useAnimation();
     const certificates = ref([
       {
         id: 1,
-        logoUrl: require(''),
+        logoUrl: require('@/assets/certificate1.png'),
         name: 'Certificate 1',
         issuer: 'Coursera',
         date: 'March 2023',
@@ -57,7 +57,7 @@ export default {
       },
       {
         id: 2,
-        logoUrl: require(''),
+        logoUrl: require('@/assets/certificate2.png'),
         name: 'Certificate 2',
         issuer: 'Udacity',
         date: 'January 2023',
@@ -66,7 +66,7 @@ export default {
       },
       {
         id: 3,
-        logoUrl: require(''),
+        logoUrl: require('@/assets/certificate3.png'),
         name: 'Certificate 3',
         issuer: 'DataCamp',
         date: 'November 2022',
@@ -75,7 +75,7 @@ export default {
       },
       {
         id: 4,
-        logoUrl: require(''),
+        logoUrl: require('@/assets/certificate4.png'),
         name: 'Certificate 4',
         issuer: 'LinkedIn Learning',
         date: 'September 2022',
