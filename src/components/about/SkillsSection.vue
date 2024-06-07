@@ -63,10 +63,12 @@
 
 <script>
 import SkillIcons from './SkillIcons.vue'
+import BaseButton from '../UI/BaseButton.vue'
 
 export default {
   components: {
     SkillIcons,
+    BaseButton,
   }
 }
 </script>
