@@ -41,7 +41,7 @@ export default {
   name: 'ExperienceSection',
   components: {
     'base-background': BaseBackground,
-    'base-card': BaseCard
+    'base-card': BaseCard,
   },
   setup() {
     const show = useAnimation();
@@ -86,7 +86,7 @@ export default {
   justify-items: center;
   justify-content: center;
   grid-template-rows: auto;
-  grid-template-columns: 1fr 0.5fr 3.5fr;
+  grid-template-columns: 1fr;
   padding-bottom: 9.6rem;
   row-gap: 4.8rem;
   position: relative;
@@ -98,7 +98,7 @@ export default {
   grid-column: 1/-1;
 }
 h2 {
-  font-size: 3.2rem;
+  font-size: 6.4rem;
   letter-spacing: 0.1rem;
   text-shadow: 2px 2px #52b788;
   padding-right: 1.2rem;
@@ -109,10 +109,9 @@ h2 {
   left: -1%;
   width: 100%;
   top: 10%;
-  height: 2rem;
-  border-left: 5px solid #40916c;
+  height: 10rem;
+  border-left: 10px solid #40916c;
   animation: moveRect 1s 1 cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
-  overflow-x: auto; /* Enable horizontal scrolling */
 }
 @keyframes moveRect {
   0% {
@@ -157,22 +156,94 @@ h2 {
 }
 @media (max-width: 1550px) {
   .experience-section {
-    grid-template-columns: 1fr;
     row-gap: 4.2rem;
   }
   h2 {
-    font-size: 9.6rem;
+    font-size: 5.6rem;
   }
   .rectangle {
-    height: 12rem;
+    height: 8rem;
   }
 }
 @media (max-width: 992px) {
   h2 {
-    font-size: 8rem;
+    font-size: 4.8rem;
   }
   .rectangle {
-    height: 10rem;
+    height: 6rem;
+  }
+}
+@media (max-width: 768px) {
+  h2 {
+    font-size: 4rem;
+  }
+  .rectangle {
+    height: 5rem;
+  }
+  .company-name {
+    font-size: 2.5rem;
+  }
+  .company-role {
+    font-size: 2rem;
+  }
+  .company-duration {
+    font-size: 1.8rem;
+  }
+  .company-description {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 480px) {
+  h2 {
+    font-size: 3.2rem;
+  }
+  h2 {
+    font-size: 2.8rem;
+  }
+  .rectangle {
+    height: 4rem;
+    border-left: 7px solid #40916c;
+  }
+  .company-logo {
+    width: 6rem;
+    height: 6rem;
+  }
+  .company-name {
+    font-size: 2.4rem;
+  }
+  .company-role {
+    font-size: 1.6rem;
+  }
+  .company-duration {
+    font-size: 1.4rem;
+  }
+  .company-description {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 350px) {
+  h2 {
+    font-size: 2.4rem;
+  }
+  .rectangle {
+    height: 3.5rem;
+    border-left: 5px solid #40916c;
+  }
+  .company-logo {
+    width: 5rem;
+    height: 5rem;
+  }
+  .company-name {
+    font-size: 2rem;
+  }
+  .company-role {
+    font-size: 1.4rem;
+  }
+  .company-duration {
+    font-size: 1.2rem;
+  }
+  .company-description {
+    font-size: 1.2rem;
   }
 }
 </style>
