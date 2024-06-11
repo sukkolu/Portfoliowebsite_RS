@@ -2,7 +2,7 @@
   <div class="skills-section">
     <h3>My skills</h3>
     <div class="skill-container">
-      <div class="skill-group spreadsheets">
+      <div class="spreadsheets">
         <h4>Spreadsheets</h4>
         <skill-icons>
           <template v-slot:logo><p>MSExcel</p></template>
@@ -13,7 +13,7 @@
           <img src="@/assets/googlesheet.svg" class="skill-icon" />
         </skill-icons>
       </div>
-      <div class="skill-group data-wrangling">
+      <div class="data-wrangling">
         <h4>Data Wrangling</h4>
         <skill-icons>
           <template v-slot:logo><p>NumPy</p></template>
@@ -28,7 +28,7 @@
           <img src="@/assets/sql-database-generic-svgrepo-com.svg" class="skill-icon" />
         </skill-icons>
       </div>
-      <div class="skill-group data-visualization">
+      <div class="data-visualization">
         <h4>Data Visualization</h4>
         <skill-icons>
           <template v-slot:logo><p>PowerBI</p></template>
@@ -39,7 +39,7 @@
           <img src="@/assets/Streamlit.svg" class="skill-icon" />
         </skill-icons>
       </div>
-      <div class="skill-group analytical-skills">
+      <div class="analytical-skills">
         <h4>Analytical Skills</h4>
         <skill-icons>
           <template v-slot:logo><p>Statistics</p></template>
@@ -73,9 +73,9 @@ export default {
 
 <style scoped>
 .skills-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  justify-items: center;
 }
 
 .skills-section h3 {
@@ -87,20 +87,38 @@ export default {
   border-bottom: 3px solid #40916c;
   width: 110rem;
   text-align: center;
-  margin-bottom: 3rem;
 }
 
-.skill-container {
+.download-buttons {
+  margin-top: 2.4rem;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 3rem;
+  gap: 2.4rem;
 }
 
-.skill-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.spreadsheets,
+.data-wrangling,
+.data-visualization,
+.analytical-skills {
+  display: grid;
+  place-items: center;
+  row-gap: 5.6rem;
+  column-gap: 2.8rem;
+}
+
+.spreadsheets {
+  grid-template-columns: repeat(2, 14rem);
+}
+
+.data-wrangling {
+  grid-template-columns: repeat(3, 14rem);
+}
+
+.data-visualization {
+  grid-template-columns: repeat(2, 14rem);
+}
+
+.analytical-skills {
+  grid-template-columns: repeat(2, 14rem);
 }
 
 h4 {
@@ -110,7 +128,19 @@ h4 {
   text-shadow: 5px 5px #52b788;
   padding-right: 1.2rem;
   text-align: center;
+  grid-column: 1/-1;
+  padding: 0 1rem;
   margin-bottom: 1rem;
+}
+
+.skill-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 8em;
+  height: 27.5rem;
+  place-items: center;
+  align-items: start;
 }
 
 .skill-icon {
@@ -119,30 +149,141 @@ h4 {
 }
 
 .cv-button {
-  margin-top: 3rem;
+  margin-bottom: 9.6rem;
 }
 
-@media (max-width: 768px) {
-  .skills-section h3 {
-    font-size: 6.4rem;
-    width: 90%;
-  }
-  
+@media (max-width: 1220px) {
   .skill-icon {
-    width: 8em;
-    height: 8em;
+    width: 8.2em;
+    height: 8.2em;
+  }
+  .spreadsheets,
+  .data-visualization {
+    grid-template-columns: repeat(2, 10.4rem);
+  }
+  .data-wrangling {
+    grid-template-columns: repeat(3, 9.6rem);
+  }
+  .analytical-skills {
+    grid-template-columns: repeat(2, 10rem);
+  }
+  .spreadsheets,
+  .data-wrangling,
+  .data-visualization {
+    row-gap: 3.4rem;
+    column-gap: 2.4rem;
+  }
+  .skill-container {
+    column-gap: 5.5em;
+  }
+  .skills-section {
+    grid-template-rows: auto auto auto;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 1140px) {
+  .skills-section h3 {
+    font-size: 8.2rem;
+    width: 92rem;
+  }
+  h4 {
+    font-size: 4.8rem;
+  }
+  .analytical-skills {
+    grid-template-columns: repeat(2, 10rem);
+  }
+  .skill-icon {
+    width: 6.4em;
+    height: 6.4em;
+  }
+  .spreadsheets {
+    grid-template-columns: repeat(2, 8.2rem);
+  }
+  .data-wrangling {
+    grid-template-columns: repeat(3, 9.6rem);
+  }
+  .spreadsheets,
+  .data-wrangling,
+  .data-visualization {
+    row-gap: 3.2rem;
+    column-gap: 1.2rem;
+  }
+  .skill-container {
+    column-gap: 5.5em;
+  }
+  .data-visualization {
+    grid-template-columns: repeat(2, 9.6rem);
+  }
+}
+
+@media (max-width: 800px) {
+  .skills-section h3 {
+    font-size: 5.8rem;
+    width: 78rem;
+  }
+  h4 {
+    font-size: 3.2rem;
+  }
+  .analytical-skills {
+    grid-template-columns: repeat(2, 7.6rem);
+  }
+  .spreadsheets {
+    grid-template-columns: repeat(2, 7.6rem);
+  }
+  .skill-icon {
+    width: 5.8em;
+    height: 5.8em;
+  }
+  .data-wrangling {
+    grid-template-columns: repeat(3, 7.2rem);
+  }
+  .spreadsheets,
+  .data-wrangling,
+  .data-visualization {
+    row-gap: 1.6rem;
+    column-gap: 0.8rem;
+  }
+  .skill-container {
+    column-gap: 5.5em;
+  }
+  .data-visualization {
+    grid-template-columns: repeat(2, 7.2rem);
+  }
+}
+
+@media (max-width: 600px) {
   .skills-section h3 {
     font-size: 4.8rem;
-    width: 90%;
+    width: 70rem;
   }
-  
+  h4 {
+    font-size: 2.8rem;
+  }
+  .analytical-skills {
+    grid-template-columns: repeat(2, 6rem);
+  }
+  .spreadsheets {
+    grid-template-columns: repeat(2, 6rem);
+  }
   .skill-icon {
-    width: 6em;
-    height: 6em;
+    width: 5.4em;
+    height: 5.4em;
+  }
+  .data-wrangling {
+    grid-template-columns: repeat(3, 5.6rem);
+  }
+  .spreadsheets,
+  .data-wrangling,
+  .data-visualization {
+    row-gap: 1.4rem;
+    column-gap: 0.6rem;
+  }
+  .skill-container {
+    column-gap: 5.5em;
+  }
+  .data-visualization {
+    grid-template-columns: repeat(2, 5.6rem);
   }
 }
+
 </style>
