@@ -144,14 +144,15 @@ h2 {
   color: #52b788;
 }
 .company-role {
-  font-size: 2.4rem;
-}
-.company-duration {
   font-size: 2rem;
   color: #a9a9a9;
 }
-.company-description {
+.company-duration {
   font-size: 1.8rem;
+  color: #a9a9a9;
+}
+.company-description {
+  font-size: 1.6rem;
   margin-top: 1rem;
 }
 @media (max-width: 1550px) {
@@ -172,6 +173,18 @@ h2 {
   .rectangle {
     height: 6rem;
   }
+  .company-name {
+    font-size: 2.8rem;
+  }
+  .company-role {
+    font-size: 1.8rem;
+  }
+  .company-duration {
+    font-size: 1.6rem;
+  }
+  .company-description {
+    font-size: 1.4rem;
+  }
 }
 @media (max-width: 768px) {
   h2 {
@@ -184,21 +197,18 @@ h2 {
     font-size: 2.5rem;
   }
   .company-role {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   .company-duration {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
   .company-description {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
 }
 @media (max-width: 480px) {
   h2 {
     font-size: 3.2rem;
-  }
-  h2 {
-    font-size: 2.8rem;
   }
   .rectangle {
     height: 4rem;
@@ -218,7 +228,8 @@ h2 {
     font-size: 1.4rem;
   }
   .company-description {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    margin-top: 0.8rem;
   }
 }
 @media (max-width: 350px) {
@@ -244,6 +255,7 @@ h2 {
   }
   .company-description {
     font-size: 1.2rem;
+    margin-top: 0.6rem;
   }
 }
 </style>
