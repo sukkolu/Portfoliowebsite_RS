@@ -127,7 +127,6 @@ export default {
   display: flex;
   flex-wrap: wrap;
   gap: 3.2rem;
-  overflow-x: auto;
 }
 .base-card {
   flex: 1 1 calc(33.333% - 3.2rem);
@@ -139,10 +138,12 @@ export default {
   overflow: hidden;
   padding: 1.6rem;
   box-sizing: border-box;
+  height: 100%; /* Adjust height */
 }
 .base-card .company-details {
   flex: 1;
   overflow-y: auto;
+  max-height: 20rem; /* Adjust max height for scrolling */
 }
 .company-logo {
   width: 100%;
@@ -283,7 +284,7 @@ export default {
     font-size: 1.2rem;
   }
   .company-description {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-top: 0.6rem;
   }
 }
