@@ -162,10 +162,10 @@ h4 {
     grid-template-columns: 10.4rem 10.4rem;
   }
   .data-wrangling {
-    grid-template-columns: 9.6rem 9.6rem 9.6rem;
+    grid-template-columns: 10.4rem 10.4rem 10.4rem;
   }
   .analytical-skills {
-    grid-template-columns: 10rem 10rem;
+    grid-template-columns: 10.4rem 10.4rem;
   }
   .spreadsheets,
   .data-wrangling,
@@ -190,14 +190,14 @@ h4 {
     font-size: 4.8rem;
   }
   .analytical-skills {
-    grid-template-columns: 10rem 10rem;
+    grid-template-columns: 9.6rem 9.6rem;
   }
   .skill-icon {
     width: 6.4em;
     height: 6.4em;
   }
   .spreadsheets {
-    grid-template-columns: 8.2rem 8.2rem;
+    grid-template-columns: 9.6rem 9.6rem;
   }
   .data-wrangling {
     grid-template-columns: 9.6rem 9.6rem 9.6rem;
@@ -229,7 +229,7 @@ h4 {
     margin-bottom: 0.8rem;
   }
   .analytical-skills {
-    grid-template-columns: 8rem 8rem;
+    grid-template-columns: 7.2rem 7.2rem;
   }
   .skill-icon {
     width: 4.8em;
@@ -278,7 +278,7 @@ h4 {
     grid-template-columns: 4.8rem 4.8rem;
   }
   .data-wrangling {
-    grid-template-columns: 5.2rem 5.2rem 5.2rem;
+    grid-template-columns: 4.8rem 4.8rem 4.8rem;
   }
   .spreadsheets,
   .data-wrangling,
@@ -307,7 +307,7 @@ h4 {
     margin-bottom: 0.5rem;
   }
   .analytical-skills {
-    grid-template-columns: 7rem 7rem;
+    grid-template-columns: 3.6rem 3.6rem;
   }
   .skill-icon {
     width: 3em;
@@ -317,7 +317,7 @@ h4 {
     grid-template-columns: 3.2rem 3.2rem;
   }
   .data-wrangling {
-    grid-template-columns: 3.6rem 3.6rem 3.6rem;
+    grid-template-columns: 3.2rem 3.2rem 3.2rem;
   }
   .spreadsheets,
   .data-wrangling,
