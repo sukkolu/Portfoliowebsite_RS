@@ -14,7 +14,7 @@
         </skill-icons>
       </div>
       <div class="data-wrangling">
-        <h4>DataWrangling</h4>
+        <h4>Data Wrangling</h4>
         <skill-icons>
           <template v-slot:logo><p>NumPy</p></template>
           <img src="@/assets/numpy.svg" class="skill-icon" />
@@ -29,7 +29,7 @@
         </skill-icons>
       </div>
       <div class="data-visualization">
-        <h4>DataVisualization</h4>
+        <h4>Data Visualization</h4>
         <skill-icons>
           <template v-slot:logo><p>PowerBI</p></template>
           <img src="@/assets/PowerBI.svg" class="skill-icon" />
@@ -40,7 +40,7 @@
         </skill-icons>
       </div>
       <div class="analytical-skills">
-        <h4>AnalyticalSkills</h4>
+        <h4>Analytical Skills</h4>
         <skill-icons>
           <template v-slot:logo><p>Statistics</p></template>
           <img src="@/assets/statistics.svg" class="skill-icon" />
@@ -74,7 +74,7 @@ export default {
 <style scoped>
 .skills-section {
   display: grid;
-  grid-template-rows: 1fr 2fr 0.5fr;
+  grid-template-rows: auto auto auto;
   justify-items: center;
 }
 
@@ -127,10 +127,10 @@ h4 {
   letter-spacing: 3px;
   text-shadow: 5px 5px #52b788;
   padding-right: 1.2rem;
-  width: 110rem;
   text-align: center;
   grid-column: 1/-1;
   padding: 0 1rem;
+  margin-bottom: 1rem;
 }
 
 .skill-container {
@@ -177,7 +177,7 @@ h4 {
     column-gap: 5.5em;
   }
   .skills-section {
-    grid-template-rows: 0.7fr 1.5fr 0.2fr;
+    grid-template-rows: auto auto auto;
   }
 }
 
@@ -215,7 +215,7 @@ h4 {
     grid-template-columns: 9.6rem 9.6rem;
   }
   .skills-section {
-    grid-template-rows: 0.5fr 1fr 0.2fr;
+    grid-template-rows: auto auto auto;
   }
 }
 
@@ -226,6 +226,7 @@ h4 {
   }
   h4 {
     font-size: 4rem;
+    margin-bottom: 0.8rem;
   }
   .analytical-skills {
     grid-template-columns: 8rem 8rem;
@@ -241,8 +242,8 @@ h4 {
     grid-template-columns: 7.2rem 7.2rem;
   }
   .spreadsheets,
-  .data-visualization,
-  .data-wrangling {
+  .data-wrangling,
+  .data-visualization {
     row-gap: 2.4rem;
     column-gap: 1rem;
   }
@@ -253,7 +254,7 @@ h4 {
     grid-template-columns: 7.2rem 7.2rem;
   }
   .skills-section {
-    grid-template-rows: 0.5fr 1fr 0.2fr;
+    grid-template-rows: auto auto auto;
   }
 }
 
@@ -267,6 +268,7 @@ h4 {
   }
   h4 {
     font-size: 3rem;
+    margin-bottom: 0.6rem;
   }
   .skill-icon {
     width: 4em;
@@ -291,7 +293,7 @@ h4 {
     grid-template-columns: 5.2rem 5.2rem;
   }
   .skills-section {
-    grid-template-rows: 0.4fr 0.8fr 0.2fr;
+    grid-template-rows: auto auto auto;
   }
 }
 
@@ -302,6 +304,7 @@ h4 {
   }
   h4 {
     font-size: 2.5rem;
+    margin-bottom: 0.5rem;
   }
   .analytical-skills {
     grid-template-columns: 7rem 7rem;
@@ -329,7 +332,7 @@ h4 {
     grid-template-columns: 3.6rem 3.6rem;
   }
   .skills-section {
-    grid-template-rows: 0.4fr 0.6fr 0.2fr;
+    grid-template-rows: auto auto auto;
   }
 }
 </style>
