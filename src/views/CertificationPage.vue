@@ -32,16 +32,17 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import useAnimation from '../mixins/animation';
 import BaseBackground from '../components/UI/BaseBackground.vue';
 import BaseCard from '../components/UI/BaseCard.vue';
 
-const { show } = useAnimation();
+// Ensure to register components
+// Use import for assets
 const certificates = ref([
   {
     id: 1,
-    logoUrl: require('@/assets/Ineroun.svg'),
+    logoUrl: new URL('@/assets/Ineroun.svg', import.meta.url).href,
     name: 'Certificate 1',
     issuer: 'iNeuron.ai',
     date: '7th May 2024',
@@ -50,7 +51,7 @@ const certificates = ref([
   },
   {
     id: 2,
-    logoUrl: require('@/assets/sql_certificate.svg'),
+    logoUrl: new URL('@/assets/sql_certificate.svg', import.meta.url).href,
     name: 'Certificate 2',
     issuer: 'HackerRank',
     date: '30th September 2023',
@@ -58,6 +59,13 @@ const certificates = ref([
       'Completed the Nanodegree program in Data Analysis, learning advanced techniques and tools such as SQL, Excel, and Power BI.',
   },
 ]);
+
+// Initialize animation and set `show` accordingly
+const { show } = useAnimation();
+
+onMounted(() => {
+  show.value = true; // Ensure show is set to true on mount
+});
 </script>
 
 <style scoped>
