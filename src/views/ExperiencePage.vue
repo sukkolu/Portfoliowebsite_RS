@@ -135,6 +135,14 @@ export default {
   flex-direction: column;
   gap: 1.6rem;
   min-width: 25rem;
+  max-height: 100%;
+  overflow: hidden;
+  padding: 1.6rem;
+  box-sizing: border-box;
+}
+.base-card .company-details {
+  flex: 1;
+  overflow-y: auto;
 }
 .company-logo {
   width: 100%;
