@@ -63,12 +63,10 @@
 
 <script>
 import SkillIcons from './SkillIcons.vue'
-import BaseButton from '../UI/BaseButton.vue'
 
 export default {
   components: {
     SkillIcons,
-    BaseButton,
   }
 }
 </script>
@@ -112,27 +110,27 @@ export default {
 }
 
 .spreadsheets {
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 12rem 12rem;
+  grid-template-rows: 1fr;
+  grid-template-columns: 14rem 14rem;
 }
 
 .data-wrangling {
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 12rem 12rem 12rem;
+  grid-template-rows: 1fr;
+  grid-template-columns: 14rem 14rem 14rem;
 }
 
 .data-visualization {
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 12rem 12rem;
+  grid-template-rows: 1fr;
+  grid-template-columns: 14rem 14rem;
 }
 
 .analytical-skills {
-  grid-template-columns: 12rem 12rem;
+  grid-template-columns: 14rem 14rem;
   grid-column: 1/-1;
 }
 
 h4 {
-  font-size: 3.4rem;
+  font-size: 4.4rem;
   color: #dee2e6;
   letter-spacing: 3px;
   text-shadow: 5px 5px #52b788;
@@ -165,7 +163,7 @@ h4 {
     height: 8.2em;
   }
   .spreadsheets {
-    grid-template-columns: 9.6rem 9.6rem;
+    grid-template-columns: 10.4rem 10.4rem;
   }
 
   .data-wrangling {
@@ -173,7 +171,7 @@ h4 {
   }
 
   .data-visualization {
-    grid-template-columns: 9.6rem 9.6rem;
+    grid-template-columns: 10.4rem 10.4rem;
   }
 
   .spreadsheets,
@@ -197,10 +195,10 @@ h4 {
     width: 92rem;
   }
   h4 {
-    font-size: 3.4rem;
+    font-size: 4.8rem;
   }
   .analytical-skills {
-    grid-template-columns: 9.6rem 9.6rem;
+    grid-template-columns: 10rem 10rem;
   }
 
   .skill-icon {
@@ -212,7 +210,7 @@ h4 {
   }
 
   .data-wrangling {
-    grid-template-columns: 8.2rem 8.2rem 8.2rem;
+    grid-template-columns: 9.6rem 9.6rem 9.6rem;
   }
   .spreadsheets,
   .data-wrangling,
@@ -225,7 +223,7 @@ h4 {
     column-gap: 5.5em;
   }
   .data-visualization {
-    grid-template-columns: 8.2rem 8.2rem;
+    grid-template-columns: 9.6rem 9.6rem;
   }
   .skills-section {
     grid-template-rows: 0.5fr 1fr 0.2fr;
@@ -238,7 +236,51 @@ h4 {
     width: 78rem;
   }
   h4 {
-    font-size: 3.4rem;
+    font-size: 4rem;
+  }
+  .analytical-skills {
+    grid-template-columns: 8rem 8rem;
+  }
+  .skill-icon {
+    width: 4.8em;
+    height: 4.8em;
+  }
+  .spreadsheets {
+    grid-template-columns: 6.4rem 6.4rem;
+  }
+
+  .data-wrangling {
+    grid-template-columns: 7.2rem 7.2rem;
+  }
+  .spreadsheets,
+  .data-visualization,
+  .data-wrangling {
+    row-gap: 2.4rem;
+    column-gap: 1rem;
+  }
+
+  .skill-container {
+    column-gap: 4.8em;
+  }
+  .data-visualization {
+    grid-template-columns: 7.2rem 7.2rem;
+  }
+  .skills-section {
+    grid-template-rows: 0.4fr 0.8fr 0.2fr;
+  }
+
+  .cv-button {
+    margin-bottom: 4.8rem;
+  }
+}
+
+@media (max-width: 780px) {
+  .skills-section h3 {
+    font-size: 4.8rem;
+    width: 58rem;
+  }
+  h4 {
+    font-size: 3.2rem;
   }
   .analytical-skills {
     grid-template-columns: 6.4rem 6.4rem;
@@ -248,55 +290,11 @@ h4 {
     height: 4.8em;
   }
   .spreadsheets {
-    grid-template-columns:6.4rem 6.4rem;
-  }
-
-  .data-wrangling {
-    grid-template-columns: 6.4rem 6.4rem;
-  }
-  .spreadsheets,
-  .data-visualization,
-  .data-wrangling {
-    row-gap: 2.2rem;
-    column-gap: 1rem;
-  }
-
-  .skill-container {
-    column-gap: 4.8em;
-  }
-  .data-visualization {
-    grid-template-columns: 6.4rem 6.4rem;
-  }
-  .skills-section {
-    grid-template-rows: 0.5fr 1fr 0.2fr;
-  }
-
-  .cv-button {
-    margin-bottom: 4.8rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .skills-section h3 {
-    font-size: 4.8rem;
-    width: 58rem;
-  }
-  h4 {
-    font-size: 3rem;
-  }
-  .analytical-skills {
-    grid-template-columns: 4.8rem 4.8rem;
-  }
-  .skill-icon {
-    width: 4em;
-    height: 4em;
-  }
-  .spreadsheets {
     grid-template-columns: 4.8rem 4.8rem;
   }
 
   .data-wrangling {
-    grid-template-columns: 4.8rem 4.8rem;
+    grid-template-columns: 5.2rem 5.2rem;
   }
   .spreadsheets,
   .data-visualization,
@@ -310,7 +308,7 @@ h4 {
     column-gap: 3.2em;
   }
   .data-visualization {
-    grid-template-columns: 4.8rem 4.8rem;
+    grid-template-columns: 5.2rem 5.2rem;
   }
   .skills-section {
     grid-template-rows: 0.3fr 1fr 0.1fr;
@@ -343,7 +341,7 @@ h4 {
   }
 
   .data-wrangling {
-    grid-template-columns: 4rem 4rem;
+    grid-template-columns: 4.8rem 4.8rem;
   }
   .spreadsheets,
   .data-visualization,
@@ -387,7 +385,7 @@ h4 {
   }
 
   .data-wrangling {
-    grid-template-columns: 3.2rem 3.2rem;
+    grid-template-columns: 3.6rem 3.6rem;
   }
   .spreadsheets,
   .data-visualization,
@@ -434,7 +432,7 @@ h4 {
   }
 
   .data-wrangling {
-    grid-template-columns: 2.4rem 2.4rem;
+    grid-template-columns: 3rem 3rem;
   }
   .spreadsheets,
   .data-visualization,
