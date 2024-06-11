@@ -35,6 +35,7 @@
 import { ref } from 'vue';
 import useAnimation from '../mixins/animation';
 import BaseBackground from '../components/UI/BaseBackground.vue';
+import BaseCard from '../components/UI/BaseCard.vue';
 
 const { show } = useAnimation();
 const certificates = ref([
@@ -52,7 +53,7 @@ const certificates = ref([
     logoUrl: require('@/assets/sql_certificate.svg'),
     name: 'Certificate 2',
     issuer: 'HackerRank',
-    date: '30th Septmeber 2023',
+    date: '30th September 2023',
     description:
       'Completed the Nanodegree program in Data Analysis, learning advanced techniques and tools such as SQL, Excel, and Power BI.',
   },
