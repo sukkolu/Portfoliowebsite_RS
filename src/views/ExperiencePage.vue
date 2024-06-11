@@ -97,7 +97,7 @@ export default {
   position: relative;
   grid-column: 1/-1;
 }
-h2 {
+.experience-title-container h2 {
   font-size: 6.4rem;
   letter-spacing: 0.1rem;
   text-shadow: 2px 2px #52b788;
@@ -125,19 +125,28 @@ h2 {
 .experience-container {
   grid-column: 1/-1;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 3.2rem;
-  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-x: auto;
+}
+.base-card {
+  flex: 1 1 calc(33.333% - 3.2rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  min-width: 25rem;
 }
 .company-logo {
-  width: 8rem;
-  height: 8rem;
+  width: 100%;
+  max-width: 8rem;
+  height: auto;
   border-radius: 50%;
   border: 5px solid #40916c;
 }
 .company-details {
   display: flex;
   flex-direction: column;
+  gap: 0.8rem;
 }
 .company-name {
   font-size: 3rem;
@@ -159,19 +168,11 @@ h2 {
   .experience-section {
     row-gap: 4.2rem;
   }
-  h2 {
+  .experience-title-container h2 {
     font-size: 5.6rem;
   }
   .rectangle {
     height: 8rem;
-  }
-}
-@media (max-width: 992px) {
-  h2 {
-    font-size: 4.8rem;
-  }
-  .rectangle {
-    height: 6rem;
   }
   .company-name {
     font-size: 2.8rem;
@@ -186,36 +187,11 @@ h2 {
     font-size: 1.4rem;
   }
 }
-@media (max-width: 768px) {
-  h2 {
-    font-size: 4rem;
+@media (max-width: 992px) {
+  .experience-title-container h2 {
+    font-size: 4.8rem;
   }
   .rectangle {
-    height: 5rem;
-  }
-  .company-name {
-    font-size: 2.5rem;
-  }
-  .company-role {
-    font-size: 1.6rem;
-  }
-  .company-duration {
-    font-size: 1.4rem;
-  }
-  .company-description {
-    font-size: 1.2rem;
-  }
-}
-@media (max-width: 480px) {
-  h2 {
-    font-size: 3.2rem;
-  }
-  .rectangle {
-    height: 4rem;
-    border-left: 7px solid #40916c;
-  }
-  .company-logo {
-    width: 6rem;
     height: 6rem;
   }
   .company-name {
@@ -229,11 +205,56 @@ h2 {
   }
   .company-description {
     font-size: 1.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .experience-title-container h2 {
+    font-size: 4rem;
+  }
+  .rectangle {
+    height: 5rem;
+  }
+  .company-name {
+    font-size: 2rem;
+  }
+  .company-role {
+    font-size: 1.4rem;
+  }
+  .company-duration {
+    font-size: 1.2rem;
+  }
+  .company-description {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .experience-title-container h2 {
+    font-size: 3.2rem;
+  }
+  .rectangle {
+    height: 4rem;
+    border-left: 7px solid #40916c;
+  }
+  .company-logo {
+    width: 6rem;
+    height: 6rem;
+  }
+  .company-name {
+    font-size: 2rem;
+  }
+  .company-role {
+    font-size: 1.6rem;
+  }
+  .company-duration {
+    font-size: 1.4rem;
+  }
+  .company-description {
+    font-size: 1.2rem;
     margin-top: 0.8rem;
   }
 }
 @media (max-width: 350px) {
-  h2 {
+  .experience-title-container h2 {
     font-size: 2.4rem;
   }
   .rectangle {
@@ -245,7 +266,7 @@ h2 {
     height: 5rem;
   }
   .company-name {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   .company-role {
     font-size: 1.4rem;
