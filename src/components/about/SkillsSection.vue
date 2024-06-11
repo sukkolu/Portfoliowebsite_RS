@@ -113,7 +113,10 @@ export default {
   grid-template-columns: 14rem 14rem 14rem;
 }
 
-.data-visualization,
+.data-visualization {
+  grid-template-columns: 14rem 14rem;
+}
+
 .analytical-skills {
   grid-template-columns: 14rem 14rem;
 }
@@ -155,17 +158,18 @@ h4 {
     height: 8.2em;
   }
   .spreadsheets,
-  .data-visualization,
-  .analytical-skills {
+  .data-visualization {
     grid-template-columns: 10.4rem 10.4rem;
   }
   .data-wrangling {
     grid-template-columns: 9.6rem 9.6rem 9.6rem;
   }
+  .analytical-skills {
+    grid-template-columns: 10rem 10rem;
+  }
   .spreadsheets,
   .data-wrangling,
-  .data-visualization,
-  .analytical-skills {
+  .data-visualization {
     row-gap: 3.4rem;
     column-gap: 2.4rem;
   }
@@ -200,16 +204,14 @@ h4 {
   }
   .spreadsheets,
   .data-wrangling,
-  .data-visualization,
-  .analytical-skills {
+  .data-visualization {
     row-gap: 3.2rem;
     column-gap: 1.2rem;
   }
   .skill-container {
     column-gap: 5.5em;
   }
-  .data-visualization,
-  .analytical-skills {
+  .data-visualization {
     grid-template-columns: 9.6rem 9.6rem;
   }
   .skills-section {
@@ -237,20 +239,18 @@ h4 {
     grid-template-columns: 6.4rem 6.4rem;
   }
   .data-wrangling {
-    grid-template-columns: 7.2rem 7.2rem 7.2rem;
+    grid-template-columns: 7.2rem 7.2rem;
   }
   .spreadsheets,
   .data-wrangling,
-  .data-visualization,
-  .analytical-skills {
+  .data-visualization {
     row-gap: 2.4rem;
     column-gap: 1rem;
   }
   .skill-container {
     column-gap: 4.8em;
   }
-  .data-visualization,
-  .analytical-skills {
+  .data-visualization {
     grid-template-columns: 7.2rem 7.2rem;
   }
   .skills-section {
@@ -282,16 +282,14 @@ h4 {
   }
   .spreadsheets,
   .data-wrangling,
-  .data-visualization,
-  .analytical-skills {
+  .data-visualization {
     row-gap: 1.2rem;
     column-gap: 1rem;
   }
   .skill-container {
     column-gap: 3.2em;
   }
-  .data-visualization,
-  .analytical-skills {
+  .data-visualization {
     grid-template-columns: 5.2rem 5.2rem;
   }
   .skills-section {
@@ -323,16 +321,14 @@ h4 {
   }
   .spreadsheets,
   .data-wrangling,
-  .data-visualization,
-  .analytical-skills {
+  .data-visualization {
     row-gap: 1rem;
     column-gap: 0.5rem;
   }
   .skill-container {
     column-gap: 2.4em;
   }
-  .data-visualization,
-  .analytical-skills {
+  .data-visualization {
     grid-template-columns: 3.6rem 3.6rem;
   }
   .skills-section {
