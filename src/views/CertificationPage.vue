@@ -9,9 +9,9 @@
       <base-card v-for="certificate in certificates" :key="certificate.id">
         <template #image>
           <img
-            :src="certificate.logoUrl"
+            :src="certificate.imageUrl"
             :alt="`Image of ${certificate.name}`"
-            class="certification-logo"
+            class="certification-image"
           />
         </template>
         <template #content>
@@ -42,7 +42,7 @@ import BaseCard from '../components/UI/BaseCard.vue';
 const certificates = ref([
   {
     id: 1,
-    logoUrl: new URL('@/assets/Ineroun.svg', import.meta.url).href,
+    imageUrl: new URL('@/assets/certificate1.png', import.meta.url).href,
     name: 'Certificate 1',
     issuer: 'iNeuron.ai',
     date: '7th May 2024',
@@ -51,7 +51,7 @@ const certificates = ref([
   },
   {
     id: 2,
-    logoUrl: new URL('@/assets/sql_certificate.svg', import.meta.url).href,
+    imageUrl: new URL('@/assets/certificate2.png', import.meta.url).href,
     name: 'Certificate 2',
     issuer: 'HackerRank',
     date: '30th September 2023',
@@ -121,10 +121,10 @@ h2 {
   margin-top: 2rem;
 }
 
-.certification-logo {
-  width: 6rem;
-  height: 6rem;
-  border-radius: 50%;
+.certification-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
   border: 3px solid #40916c;
 }
 
@@ -158,9 +158,8 @@ h2 {
     height: 12rem;
   }
 
-  .certification-logo {
-    width: 5rem;
-    height: 5rem;
+  .certification-image {
+    width: 100%;
   }
 
   .certification-name {
@@ -186,9 +185,8 @@ h2 {
     height: 10rem;
   }
 
-  .certification-logo {
-    width: 4rem;
-    height: 4rem;
+  .certification-image {
+    width: 100%;
   }
 
   .certification-name {
@@ -214,9 +212,8 @@ h2 {
     height: 8rem;
   }
 
-  .certification-logo {
-    width: 3.2rem;
-    height: 3.2rem;
+  .certification-image {
+    width: 100%;
   }
 
   .certification-name {
