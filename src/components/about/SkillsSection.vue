@@ -14,7 +14,7 @@
         </skill-icons>
       </div>
       <div class="data-wrangling">
-        <h4>DataWrangling</h4>
+        <h4>Data-Wrangling</h4>
         <skill-icons>
           <template v-slot:logo><p>NumPy</p></template>
           <img src="@/assets/numpy.svg" class="skill-icon" />
@@ -29,7 +29,7 @@
         </skill-icons>
       </div>
       <div class="data-visualization">
-        <h4>DataVisualization</h4>
+        <h4>Data-Visualization</h4>
         <skill-icons>
           <template v-slot:logo><p>PowerBI</p></template>
           <img src="@/assets/PowerBI.svg" class="skill-icon" />
@@ -40,7 +40,7 @@
         </skill-icons>
       </div>
       <div class="analytical-skills">
-        <h4>AnalyticalSkills</h4>
+        <h4>Analytical-Skills</h4>
         <skill-icons>
           <template v-slot:logo><p>Statistics</p></template>
           <img src="@/assets/statistics.svg" class="skill-icon" />
