@@ -31,62 +31,32 @@
   </section>
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue';
 import useAnimation from '../mixins/animation';
 import BaseBackground from '../components/UI/BaseBackground.vue';
-import BaseCard from '../components/UI/BaseCard.vue';
 
-export default {
-  name: 'CertificationSection',
-  components: {
-    'base-background': BaseBackground,
-    'base-card': BaseCard
+const { show } = useAnimation();
+const certificates = ref([
+  {
+    id: 1,
+    logoUrl: require('@/assets/Ineroun.svg'),
+    name: 'Certificate 1',
+    issuer: 'iNeuron.ai',
+    date: '7th May 2024',
+    description:
+      'Completed a comprehensive course on Data Analysis with Python, covering various libraries and techniques for effective data handling.',
   },
-  setup() {
-    const { show } = useAnimation();
-    const certificates = ref([
-      {
-        id: 1,
-        logoUrl: require('@/assets/certificate1-logo.png'),
-        name: 'Certificate 1',
-        issuer: 'Coursera',
-        date: 'March 2023',
-        description:
-          'Completed a comprehensive course on Data Analysis with Python, covering various libraries and techniques for effective data handling.',
-      },
-      {
-        id: 2,
-        logoUrl: require('@/assets/certificate2-logo.png'),
-        name: 'Certificate 2',
-        issuer: 'Udacity',
-        date: 'January 2023',
-        description:
-          'Completed the Nanodegree program in Data Analysis, learning advanced techniques and tools such as SQL, Excel, and Power BI.',
-      },
-      {
-        id: 3,
-        logoUrl: require('@/assets/certificate3-logo.png'),
-        name: 'Certificate 3',
-        issuer: 'DataCamp',
-        date: 'November 2022',
-        description:
-          'Earned certification in Data Science, focusing on Python, R, and various machine learning techniques.',
-      },
-      {
-        id: 4,
-        logoUrl: require('@/assets/certificate4-logo.png'),
-        name: 'Certificate 4',
-        issuer: 'LinkedIn Learning',
-        date: 'September 2022',
-        description:
-          'Completed a course on Advanced Excel for Data Analysis, mastering complex formulas, data visualization, and pivot tables.',
-      },
-    ]);
-
-    return { show, certificates };
+  {
+    id: 2,
+    logoUrl: require('@/assets/sql_certificate.svg'),
+    name: 'Certificate 2',
+    issuer: 'HackerRank',
+    date: '30th Septmeber 2023',
+    description:
+      'Completed the Nanodegree program in Data Analysis, learning advanced techniques and tools such as SQL, Excel, and Power BI.',
   },
-};
+]);
 </script>
 
 <style scoped>
@@ -107,9 +77,10 @@ export default {
 }
 
 h2 {
-  font-size: 2.4rem;
-  letter-spacing: 0.1rem;
-  text-shadow: 2px 2px #52b788;
+  font-size: 12.6rem;
+  letter-spacing: 3px;
+  text-shadow: 5px 5px #52b788;
+  padding-right: 1.2rem;
 }
 
 .rectangle {
@@ -118,8 +89,8 @@ h2 {
   left: -1%;
   width: 100%;
   top: 10%;
-  height: 1.6rem;
-  border-left: 5px solid #40916c;
+  height: 16rem;
+  border-left: 10px solid #40916c;
   animation: moveRect 1s 1 cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
 }
 
@@ -171,11 +142,11 @@ h2 {
 
 @media (max-width: 768px) {
   h2 {
-    font-size: 2rem;
+    font-size: 9.6rem;
   }
 
   .rectangle {
-    height: 1.2rem;
+    height: 12rem;
   }
 
   .certification-logo {
@@ -199,11 +170,11 @@ h2 {
 
 @media (max-width: 480px) {
   h2 {
-    font-size: 1.6rem;
+    font-size: 8rem;
   }
 
   .rectangle {
-    height: 1rem;
+    height: 10rem;
   }
 
   .certification-logo {
@@ -222,6 +193,34 @@ h2 {
 
   .certification-description {
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 350px) {
+  h2 {
+    font-size: 6.4rem;
+  }
+
+  .rectangle {
+    height: 8rem;
+  }
+
+  .certification-logo {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .certification-name {
+    font-size: 1.2rem;
+  }
+
+  .certification-issuer,
+  .certification-date {
+    font-size: 0.8rem;
+  }
+
+  .certification-description {
+    font-size: 0.8rem;
   }
 }
 </style>

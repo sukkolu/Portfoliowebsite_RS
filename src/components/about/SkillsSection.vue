@@ -130,7 +130,7 @@ export default {
 }
 
 h4 {
-  font-size: 4.4rem;
+  font-size: 3.4rem;
   color: #dee2e6;
   letter-spacing: 3px;
   text-shadow: 5px 5px #52b788;
@@ -195,7 +195,7 @@ h4 {
     width: 92rem;
   }
   h4 {
-    font-size: 4.8rem;
+    font-size: 3.4rem;
   }
   .analytical-skills {
     grid-template-columns: 10rem 10rem;
@@ -236,7 +236,7 @@ h4 {
     width: 78rem;
   }
   h4 {
-    font-size: 4rem;
+    font-size: 3.4rem;
   }
   .analytical-skills {
     grid-template-columns: 8rem 8rem;
@@ -280,7 +280,7 @@ h4 {
     width: 58rem;
   }
   h4 {
-    font-size: 3.2rem;
+    font-size: 3.4rem;
   }
   .analytical-skills {
     grid-template-columns: 6.4rem 6.4rem;
@@ -327,7 +327,7 @@ h4 {
   }
   h4 {
     text-shadow: 2.5px 2.5px #52b788;
-    font-size: 2rem;
+    font-size: 3.4rem;
   }
   .analytical-skills {
     grid-template-columns: 4rem 4rem;
@@ -374,7 +374,7 @@ h4 {
   }
   h4 {
     text-shadow: 2px 2px #52b788;
-    font-size: 1.6rem;
+    font-size: 3.4rem;
   }
   .skill-icon {
     width: 3.2em;
@@ -418,7 +418,7 @@ h4 {
   }
   h4 {
     text-shadow: 1px 1px #52b788;
-    font-size: 1.2rem;
+    font-size: 3.4rem;
   }
   .analytical-skills {
     grid-template-columns: 2.4rem 2.4rem;
