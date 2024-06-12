@@ -99,7 +99,7 @@ export default {
   text-align: center;
 }
 h2 {
-  font-size: 3.2rem;
+  font-size: 12.6rem;
   letter-spacing: 0.1rem;
   text-shadow: 2px 2px #52b788;
   padding-right: 1.2rem;
@@ -167,7 +167,7 @@ h2 {
 }
 @media (max-width: 992px) {
   h2 {
-    font-size: 2.4rem;
+    font-size: 9.6rem;
   }
   .rectangle {
     height: 1.5rem;
@@ -191,7 +191,7 @@ h2 {
 }
 @media (max-width: 576px) {
   h2 {
-    font-size: 1.8rem;
+    font-size: 8rem;
   }
   .rectangle {
     height: 1.2rem;
