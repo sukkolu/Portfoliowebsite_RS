@@ -34,8 +34,6 @@
 <script>
 import { ref } from 'vue';
 import useAnimation from '../mixins/animation';
-import BaseBackground from '../components/UI/BaseBackground.vue';
-import BaseCard from '../components/UI/BaseCard.vue';
 
 export default {
   name: 'ExperienceSection',
