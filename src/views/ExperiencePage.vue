@@ -86,7 +86,7 @@ export default {
   justify-items: center;
   justify-content: center;
   grid-template-rows: auto;
-  grid-template-columns: 1fr 0.5fr 3.5fr;
+  grid-template-columns: 1fr;
   padding-bottom: 9.6rem;
   row-gap: 4.8rem;
   position: relative;
@@ -96,6 +96,7 @@ export default {
   margin-top: 2.4rem;
   position: relative;
   grid-column: 1/-1;
+  text-align: center;
 }
 h2 {
   font-size: 3.2rem;
@@ -106,8 +107,9 @@ h2 {
 .rectangle {
   background: #333533;
   position: absolute;
-  left: -1%;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
   top: 10%;
   height: 2rem;
   border-left: 5px solid #40916c;
@@ -116,7 +118,7 @@ h2 {
 }
 @keyframes moveRect {
   0% {
-    left: 0;
+    left: 50%;
   }
   100% {
     left: 100%;
@@ -126,7 +128,7 @@ h2 {
 .experience-container {
   grid-column: 1/-1;
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: column;
   gap: 3.2rem;
   overflow-x: auto; /* Enable horizontal scrolling */
 }
@@ -155,24 +157,52 @@ h2 {
   font-size: 1.8rem;
   margin-top: 1rem;
 }
-@media (max-width: 1550px) {
-  .experience-section {
-    grid-template-columns: 1fr;
-    row-gap: 4.2rem;
-  }
-  h2 {
-    font-size: 9.6rem;
-  }
-  .rectangle {
-    height: 12rem;
-  }
-}
 @media (max-width: 992px) {
   h2 {
-    font-size: 8rem;
+    font-size: 2.4rem;
   }
   .rectangle {
-    height: 10rem;
+    height: 1.5rem;
+  }
+  .company-logo {
+    width: 6rem;
+    height: 6rem;
+  }
+  .company-name {
+    font-size: 2.4rem;
+  }
+  .company-role {
+    font-size: 2rem;
+  }
+  .company-duration {
+    font-size: 1.6rem;
+  }
+  .company-description {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 576px) {
+  h2 {
+    font-size: 1.8rem;
+  }
+  .rectangle {
+    height: 1.2rem;
+  }
+  .company-logo {
+    width: 4rem;
+    height: 4rem;
+  }
+  .company-name {
+    font-size: 1.8rem;
+  }
+  .company-role {
+    font-size: 1.6rem;
+  }
+  .company-duration {
+    font-size: 1.4rem;
+  }
+  .company-description {
+    font-size: 1.2rem;
   }
 }
 </style>
