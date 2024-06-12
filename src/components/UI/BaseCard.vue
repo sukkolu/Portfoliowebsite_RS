@@ -14,7 +14,6 @@
         </div>
         <div class="card-buttons">
           <slot name="button-1"></slot>
-
           <slot name="button-2"></slot>
         </div>
       </div>
@@ -23,27 +22,28 @@
 </template>
 
 <script>
-import { ref } from 'vue'
-import BaseButton from './BaseButton.vue'
+import { ref } from 'vue';
+import BaseButton from './BaseButton.vue';
+
 export default {
   components: { BaseButton },
   setup() {
-    const hoverProject = ref(false)
+    const hoverProject = ref(false);
 
     function mouseOnProject() {
-      hoverProject.value = true
+      hoverProject.value = true;
     }
     function mouseOffProject() {
-      hoverProject.value = false
+      hoverProject.value = false;
     }
 
     return {
       hoverProject,
       mouseOffProject,
       mouseOnProject
-    }
+    };
   }
-}
+};
 </script>
 
 <style scoped>
@@ -84,14 +84,17 @@ export default {
   gap: 2.4rem;
   box-shadow: 0 -2px 5px 2px rgba(0, 0, 0, 0.3);
   padding: 3.2rem 3.2rem 1.2rem 3.2rem;
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .card-content h4 {
   font-size: 3.6rem;
 }
+
 .technologies-logos {
   display: flex;
-  gap: 3.2rem;
+  flex-wrap: wrap;
+  gap: 1.2rem;
 }
 
 .come-in-enter-from,
@@ -112,6 +115,7 @@ export default {
   z-index: 1;
   transform: translateY(0);
 }
+
 @media (max-width: 992px) {
   .card-container {
     width: 65rem;
@@ -127,21 +131,6 @@ export default {
 
 @media (max-width: 768px) {
   .card-container {
-    width: 57.5rem;
-    height: 26rem;
-  }
-  .card-content {
-    font-size: 1.6rem;
-  }
-  .card-content h4 {
-    font-size: 2rem;
-  }
-  .technologies-logos {
-    gap: 2.4rem;
-  }
-}
-@media (max-width: 768px) {
-  .card-container {
     width: 52.5rem;
     height: 23.5rem;
   }
@@ -155,6 +144,7 @@ export default {
     gap: 2.4rem;
   }
 }
+
 @media (max-width: 580px) {
   .card-container {
     width: 45rem;
@@ -171,6 +161,7 @@ export default {
     gap: 2.4rem;
   }
 }
+
 @media (max-width: 480px) {
   .card-container {
     width: 32.5rem;
@@ -188,6 +179,7 @@ export default {
     gap: 2rem;
   }
 }
+
 @media (max-width: 350px) {
   .card-container {
     width: 27rem;

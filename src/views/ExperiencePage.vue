@@ -132,6 +132,11 @@ h2 {
   gap: 3.2rem;
   overflow-x: auto; /* Enable horizontal scrolling */
 }
+.base-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 .company-logo {
   width: 8rem;
   height: 8rem;
@@ -141,21 +146,24 @@ h2 {
 .company-details {
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 .company-name {
-  font-size: 3rem;
+  font-size: 2.4rem;
   color: #52b788;
 }
 .company-role {
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 .company-duration {
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: #a9a9a9;
 }
 .company-description {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   margin-top: 1rem;
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 10rem; /* Set a maximum height for the description */
 }
 @media (max-width: 992px) {
   h2 {
