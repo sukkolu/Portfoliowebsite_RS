@@ -34,6 +34,8 @@
 <script>
 import { ref } from 'vue';
 import useAnimation from '../mixins/animation';
+import BaseBackground from '../components/UI/BaseBackground.vue';
+import BaseCard from '../components/UI/BaseCard.vue';
 
 export default {
   name: 'ExperienceSection',
@@ -47,7 +49,7 @@ export default {
       {
         id: 1,
         companyName: 'Tata Motors Finance',
-        companyLogoUrl: 'company1_logo.svg', // Adjust the path as per your project structure
+        companyLogoUrl: new URL('../assets/company1_logo.svg', import.meta.url).href, // Corrected path
         role: 'Operations Executive',
         startDate: 'Feb 2024',
         endDate: 'Present',
@@ -57,7 +59,7 @@ export default {
       {
         id: 2,
         companyName: 'Accenture',
-        companyLogoUrl: 'company2_logo.svg', // Adjust the path as per your project structure
+        companyLogoUrl: new URL('../assets/company2_logo.svg', import.meta.url).href, // Corrected path
         role: 'Transaction Analyst',
         startDate: 'Aug 2020',
         endDate: 'Sep 2022',
@@ -67,7 +69,7 @@ export default {
     ]);
 
     const getImageUrl = (imagePath) => {
-      return new URL(`../assets/${imagePath}`, import.meta.url).href;
+      return imagePath; // URL is already processed
     };
 
     return { show, experiences, getImageUrl };
