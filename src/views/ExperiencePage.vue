@@ -41,7 +41,7 @@ export default {
   name: 'ExperienceSection',
   components: {
     'base-background': BaseBackground,
-    'base-card': BaseCard,
+    'base-card': BaseCard
   },
   setup() {
     const show = useAnimation();
@@ -86,7 +86,7 @@ export default {
   justify-items: center;
   justify-content: center;
   grid-template-rows: auto;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 0.5fr 3.5fr;
   padding-bottom: 9.6rem;
   row-gap: 4.8rem;
   position: relative;
@@ -97,8 +97,8 @@ export default {
   position: relative;
   grid-column: 1/-1;
 }
-.experience-title-container h2 {
-  font-size: 6.4rem;
+h2 {
+  font-size: 3.2rem;
   letter-spacing: 0.1rem;
   text-shadow: 2px 2px #52b788;
   padding-right: 1.2rem;
@@ -109,9 +109,10 @@ export default {
   left: -1%;
   width: 100%;
   top: 10%;
-  height: 10rem;
-  border-left: 10px solid #40916c;
+  height: 2rem;
+  border-left: 5px solid #40916c;
   animation: moveRect 1s 1 cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+  overflow-x: auto; /* Enable horizontal scrolling */
 }
 @keyframes moveRect {
   0% {
@@ -125,167 +126,53 @@ export default {
 .experience-container {
   grid-column: 1/-1;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 3.2rem;
-}
-.base-card {
-  flex: 1 1 calc(33.333% - 3.2rem);
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
-  min-width: 25rem;
-  max-height: 100%;
-  overflow: hidden;
-  padding: 1.6rem;
-  box-sizing: border-box;
-  height: 100%; /* Adjust height */
-}
-.base-card .company-details {
-  flex: 1;
-  overflow-y: auto;
-  max-height: 20rem; /* Adjust max height for scrolling */
+  overflow-x: auto; /* Enable horizontal scrolling */
 }
 .company-logo {
-  width: 100%;
-  max-width: 8rem;
-  height: auto;
+  width: 8rem;
+  height: 8rem;
   border-radius: 50%;
   border: 5px solid #40916c;
 }
 .company-details {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
 }
 .company-name {
   font-size: 3rem;
   color: #52b788;
 }
 .company-role {
+  font-size: 2.4rem;
+}
+.company-duration {
   font-size: 2rem;
   color: #a9a9a9;
 }
-.company-duration {
-  font-size: 1.8rem;
-  color: #a9a9a9;
-}
 .company-description {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin-top: 1rem;
 }
 @media (max-width: 1550px) {
   .experience-section {
+    grid-template-columns: 1fr;
     row-gap: 4.2rem;
   }
-  .experience-title-container h2 {
-    font-size: 5.6rem;
+  h2 {
+    font-size: 9.6rem;
   }
   .rectangle {
-    height: 8rem;
-  }
-  .company-name {
-    font-size: 2.8rem;
-  }
-  .company-role {
-    font-size: 1.8rem;
-  }
-  .company-duration {
-    font-size: 1.6rem;
-  }
-  .company-description {
-    font-size: 1.4rem;
+    height: 12rem;
   }
 }
 @media (max-width: 992px) {
-  .experience-title-container h2 {
-    font-size: 4.8rem;
+  h2 {
+    font-size: 8rem;
   }
   .rectangle {
-    height: 6rem;
-  }
-  .company-name {
-    font-size: 2.4rem;
-  }
-  .company-role {
-    font-size: 1.6rem;
-  }
-  .company-duration {
-    font-size: 1.4rem;
-  }
-  .company-description {
-    font-size: 1.2rem;
-  }
-}
-@media (max-width: 768px) {
-  .experience-title-container h2 {
-    font-size: 4rem;
-  }
-  .rectangle {
-    height: 5rem;
-  }
-  .company-name {
-    font-size: 2rem;
-  }
-  .company-role {
-    font-size: 1.4rem;
-  }
-  .company-duration {
-    font-size: 1.2rem;
-  }
-  .company-description {
-    font-size: 1.2rem;
-  }
-}
-@media (max-width: 480px) {
-  .experience-title-container h2 {
-    font-size: 3.2rem;
-  }
-  .rectangle {
-    height: 4rem;
-    border-left: 7px solid #40916c;
-  }
-  .company-logo {
-    width: 6rem;
-    height: 6rem;
-  }
-  .company-name {
-    font-size: 2rem;
-  }
-  .company-role {
-    font-size: 1.6rem;
-  }
-  .company-duration {
-    font-size: 1.4rem;
-  }
-  .company-description {
-    font-size: 1.2rem;
-    margin-top: 0.8rem;
-  }
-}
-@media (max-width: 350px) {
-  .experience-title-container h2 {
-    font-size: 2.4rem;
-  }
-  .rectangle {
-    height: 3.5rem;
-    border-left: 5px solid #40916c;
-  }
-  .company-logo {
-    width: 5rem;
-    height: 5rem;
-  }
-  .company-name {
-    font-size: 1.6rem;
-  }
-  .company-role {
-    font-size: 1.4rem;
-  }
-  .company-duration {
-    font-size: 1.2rem;
-  }
-  .company-description {
-    font-size: 1rem;
-    margin-top: 0.6rem;
+    height: 10rem;
   }
 }
 </style>
