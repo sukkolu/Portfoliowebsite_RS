@@ -32,7 +32,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
 import useAnimation from '../mixins/animation';
 import BaseBackground from '../components/UI/BaseBackground.vue';
 import BaseCard from '../components/UI/BaseCard.vue';
@@ -63,9 +63,6 @@ const certificates = ref([
 // Initialize animation and set `show` accordingly
 const { show } = useAnimation();
 
-onMounted(() => {
-  show.value = true; // Ensure show is set to true on mount
-});
 </script>
 
 <style scoped>
