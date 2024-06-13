@@ -40,12 +40,10 @@ import useAnimation from '../mixins/animation';
 import BaseBackground from '../components/UI/BaseBackground.vue';
 import BaseCard from '../components/UI/BaseCard.vue';
 
-// Ensure to register components
-// Use import for assets
 const certificates = ref([
   {
     id: 1,
-    imageUrl: new URL('@/assets/certificate1.png', import.meta.url).href,
+    imageUrl: new URL('@/assets/Ineroun.svg', import.meta.url).href,
     name: 'Certificate 1',
     issuer: 'iNeuron.ai',
     date: '7th May 2024',
@@ -54,7 +52,7 @@ const certificates = ref([
   },
   {
     id: 2,
-    imageUrl: new URL('@/assets/certificate2.png', import.meta.url).href,
+    imageUrl: new URL('@/assets/sql_certificate.svg', import.meta.url).href,
     name: 'Certificate 2',
     issuer: 'HackerRank',
     date: '30th September 2023',
@@ -63,7 +61,6 @@ const certificates = ref([
   },
 ]);
 
-// Initialize animation and set `show` accordingly
 const { show } = useAnimation();
 </script>
 
@@ -171,10 +168,6 @@ h2 {
     height: 12rem;
   }
 
-  .certification-image {
-    width: 100%;
-  }
-
   .certification-name {
     font-size: 1.6rem;
   }
@@ -191,15 +184,11 @@ h2 {
 
 @media (max-width: 480px) {
   h2 {
-    font-size: 8rem;
+    font-size: 6.4rem;
   }
 
   .rectangle {
     height: 10rem;
-  }
-
-  .certification-image {
-    width: 100%;
   }
 
   .certification-name {
@@ -218,15 +207,11 @@ h2 {
 
 @media (max-width: 350px) {
   h2 {
-    font-size: 6.4rem;
+    font-size: 4.8rem;
   }
 
   .rectangle {
     height: 8rem;
-  }
-
-  .certification-image {
-    width: 100%;
   }
 
   .certification-name {
