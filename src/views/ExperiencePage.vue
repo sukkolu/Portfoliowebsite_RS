@@ -1,11 +1,13 @@
 <template>
   <section class="experience-section">
     <base-background></base-background>
-    <div class="experience-title-container">
-      <div class="rectangle" v-if="show"></div>
-      <h2>Experience</h2>
+    <div class="experience-header">
+      <div class="experience-title-container">
+        <div class="rectangle" v-if="show"></div>
+        <h2>Experience</h2>
+      </div>
     </div>
-    <div class="experience-container" v-if="show">
+    <div class="experience-container" :class="{ show: show }">
       <base-card v-for="experience in experiences" :key="experience.id">
         <template #image>
           <img
@@ -92,7 +94,7 @@ export default {
   color: #dee2e6;
 }
 
-.experience-title-container {
+.experience-header {
   margin-top: 6.4rem;
   display: flex;
   gap: 6.4rem;
