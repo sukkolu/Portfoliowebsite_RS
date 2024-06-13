@@ -27,9 +27,6 @@
               </div>
             </div>
           </template>
-          <template #button-1>
-            <button class="view-button">View Certificate</button>
-          </template>
         </base-card>
       </div>
     </div>
@@ -47,7 +44,7 @@ import BaseCard from '../components/UI/BaseCard.vue';
 const certificates = ref([
   {
     id: 1,
-    imageUrl: new URL('@/assets/Ineroun.svg', import.meta.url).href,
+    imageUrl: new URL('@/assets/certificate1.png', import.meta.url).href,
     name: 'Certificate 1',
     issuer: 'iNeuron.ai',
     date: '7th May 2024',
@@ -56,7 +53,7 @@ const certificates = ref([
   },
   {
     id: 2,
-    imageUrl: new URL('@/assets/sql_certificate.svg', import.meta.url).href,
+    imageUrl: new URL('@/assets/certificate2.png', import.meta.url).href,
     name: 'Certificate 2',
     issuer: 'HackerRank',
     date: '30th September 2023',
@@ -86,10 +83,10 @@ const { show } = useAnimation();
 }
 
 h2 {
-  font-size: 3rem; /* Adjusted for better mobile view */
-  letter-spacing: 1px; /* Adjusted for better mobile view */
-  text-shadow: 2px 2px #52b788; /* Adjusted for better mobile view */
-  padding-right: 0.6rem; /* Adjusted for better mobile view */
+  font-size: 4rem;
+  letter-spacing: 3px;
+  text-shadow: 5px 5px #52b788;
+  padding-right: 1.2rem;
 }
 
 .rectangle {
@@ -98,7 +95,7 @@ h2 {
   left: -1%;
   width: 100%;
   top: 10%;
-  height: 4rem; /* Adjusted for better mobile view */
+  height: 8rem;
   border-left: 10px solid #40916c;
   animation: moveRect 1s 1 cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
 }
@@ -123,12 +120,14 @@ h2 {
 
 .scroll-container {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .certification-card {
   flex: 0 0 auto;
-  width: 300px;
+  width: 80%;
+  min-width: 250px;
+  margin-right: 1rem;
 }
 
 .certification-image {
@@ -159,31 +158,17 @@ h2 {
   margin-top: 0.5rem;
 }
 
-.view-button {
-  background-color: #40916c;
-  color: #fff;
-  padding: 0.8rem 1.6rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1.4rem;
-}
-
-.view-button:hover {
-  background-color: #52b788;
-}
-
 @media (max-width: 768px) {
   h2 {
-    font-size: 2.4rem; /* Adjusted for better mobile view */
+    font-size: 3.2rem;
   }
 
   .rectangle {
-    height: 3rem; /* Adjusted for better mobile view */
+    height: 6rem;
   }
 
   .certification-card {
-    width: 250px; /* Adjusted for better mobile view */
+    width: 70%;
   }
 
   .certification-name {
@@ -202,15 +187,15 @@ h2 {
 
 @media (max-width: 480px) {
   h2 {
-    font-size: 2rem; /* Adjusted for better mobile view */
+    font-size: 2.4rem;
   }
 
   .rectangle {
-    height: 2rem; /* Adjusted for better mobile view */
+    height: 4rem;
   }
 
   .certification-card {
-    width: 200px; /* Adjusted for better mobile view */
+    width: 90%;
   }
 
   .certification-name {
@@ -229,15 +214,15 @@ h2 {
 
 @media (max-width: 350px) {
   h2 {
-    font-size: 1.6rem; /* Adjusted for better mobile view */
+    font-size: 2rem;
   }
 
   .rectangle {
-    height: 1.5rem; /* Adjusted for better mobile view */
+    height: 3rem;
   }
 
   .certification-card {
-    width: 150px; /* Adjusted for better mobile view */
+    width: 100%;
   }
 
   .certification-name {
