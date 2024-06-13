@@ -6,29 +6,27 @@
       <h2>Certifications</h2>
     </div>
     <div class="certification-container" v-if="show">
-      <div class="scroll-container">
-        <base-card v-for="certificate in certificates" :key="certificate.id" class="certification-card">
-          <template #image>
-            <img
-              :src="certificate.imageUrl"
-              :alt="`Image of ${certificate.name}`"
-              class="certification-image"
-            />
-          </template>
-          <template #content>
-            <div class="certification-details">
-              <div class="certification-name">{{ certificate.name }}</div>
-              <div class="certification-issuer">
-                Issuer: {{ certificate.issuer }}
-              </div>
-              <div class="certification-date">Date: {{ certificate.date }}</div>
-              <div class="certification-description">
-                <p>{{ certificate.description }}</p>
-              </div>
+      <base-card v-for="certificate in certificates" :key="certificate.id">
+        <template #image>
+          <img
+            :src="certificate.imageUrl"
+            :alt="`Image of ${certificate.name}`"
+            class="certification-image"
+          />
+        </template>
+        <template #content>
+          <div class="certification-details">
+            <div class="certification-name">{{ certificate.name }}</div>
+            <div class="certification-issuer">
+              Issuer: {{ certificate.issuer }}
             </div>
-          </template>
-        </base-card>
-      </div>
+            <div class="certification-date">Date: {{ certificate.date }}</div>
+            <div class="certification-description">
+              <p>{{ certificate.description }}</p>
+            </div>
+          </div>
+        </template>
+      </base-card>
     </div>
   </section>
 </template>
@@ -44,7 +42,7 @@ import BaseCard from '../components/UI/BaseCard.vue';
 const certificates = ref([
   {
     id: 1,
-    imageUrl: new URL('@/assets/certificate1.png', import.meta.url).href,
+    imageUrl: new URL('@/assets/Ineroun.svg', import.meta.url).href,
     name: 'Certificate 1',
     issuer: 'iNeuron.ai',
     date: '7th May 2024',
@@ -53,7 +51,7 @@ const certificates = ref([
   },
   {
     id: 2,
-    imageUrl: new URL('@/assets/certificate2.png', import.meta.url).href,
+    imageUrl: new URL('@/assets/sql_certificate.svg', import.meta.url).href,
     name: 'Certificate 2',
     issuer: 'HackerRank',
     date: '30th September 2023',
@@ -83,7 +81,7 @@ const { show } = useAnimation();
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 12.6rem;
   letter-spacing: 3px;
   text-shadow: 5px 5px #52b788;
   padding-right: 1.2rem;
@@ -95,7 +93,7 @@ h2 {
   left: -1%;
   width: 100%;
   top: 10%;
-  height: 8rem;
+  height: 16rem;
   border-left: 10px solid #40916c;
   animation: moveRect 1s 1 cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
 }
@@ -111,23 +109,11 @@ h2 {
 }
 
 .certification-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
   width: 100%;
   margin-top: 2rem;
-  overflow-x: auto;
-  white-space: nowrap;
-  padding: 0 1rem;
-}
-
-.scroll-container {
-  display: flex;
-  gap: 1rem;
-}
-
-.certification-card {
-  flex: 0 0 auto;
-  width: 80%;
-  min-width: 250px;
-  margin-right: 1rem;
 }
 
 .certification-image {
@@ -160,15 +146,11 @@ h2 {
 
 @media (max-width: 768px) {
   h2 {
-    font-size: 3.2rem;
+    font-size: 9.6rem;
   }
 
   .rectangle {
-    height: 6rem;
-  }
-
-  .certification-card {
-    width: 70%;
+    height: 12rem;
   }
 
   .certification-name {
@@ -187,15 +169,11 @@ h2 {
 
 @media (max-width: 480px) {
   h2 {
-    font-size: 2.4rem;
+    font-size: 8rem;
   }
 
   .rectangle {
-    height: 4rem;
-  }
-
-  .certification-card {
-    width: 90%;
+    height: 10rem;
   }
 
   .certification-name {
@@ -214,15 +192,11 @@ h2 {
 
 @media (max-width: 350px) {
   h2 {
-    font-size: 2rem;
+    font-size: 6.4rem;
   }
 
   .rectangle {
-    height: 3rem;
-  }
-
-  .certification-card {
-    width: 100%;
+    height: 8rem;
   }
 
   .certification-name {
