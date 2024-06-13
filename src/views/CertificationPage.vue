@@ -26,6 +26,9 @@
             </div>
           </div>
         </template>
+        <template #button-1>
+          <button class="view-button">View Certificate</button>
+        </template>
       </base-card>
     </div>
   </section>
@@ -62,7 +65,6 @@ const certificates = ref([
 
 // Initialize animation and set `show` accordingly
 const { show } = useAnimation();
-
 </script>
 
 <style scoped>
@@ -144,6 +146,20 @@ h2 {
 .certification-description {
   font-size: 1.2rem;
   margin-top: 0.5rem;
+}
+
+.view-button {
+  background-color: #40916c;
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+.view-button:hover {
+  background-color: #52b788;
 }
 
 @media (max-width: 768px) {
