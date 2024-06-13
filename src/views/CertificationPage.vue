@@ -31,11 +31,27 @@
   </section>
 </template>
 
-<script setup>
+<script>
 import { ref } from 'vue';
 import useAnimation from '../mixins/animation';
-import BaseBackground from '../components/UI/BaseBackground.vue';
-import BaseCard from '../components/UI/BaseCard.vue';
+import SkillsSection from '../components/about/SkillsSection.vue';
+
+export default {
+  components: {
+    SkillsSection,
+  },
+  setup() {
+    const show = useAnimation()
+    const scale = ref(0)
+    if (show === false) {
+      scale.value = 0
+    } else {
+      scale.value = 1
+    }
+    return { show, scale }
+  }
+}
+</script>
 
 // Ensure to register components
 // Use import for assets
@@ -60,7 +76,6 @@ const certificates = ref([
   },
 ]);
 
-const { show } = useAnimation();
 </script>
 
 <style scoped>
