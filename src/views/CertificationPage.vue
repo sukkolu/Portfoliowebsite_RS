@@ -17,9 +17,7 @@
         <template #content>
           <div class="certification-details">
             <div class="certification-name">{{ certificate.name }}</div>
-            <div class="certification-issuer">
-              Issuer: {{ certificate.issuer }}
-            </div>
+            <div class="certification-issuer">Issuer: {{ certificate.issuer }}</div>
             <div class="certification-date">Date: {{ certificate.date }}</div>
             <div class="certification-description">
               <p>{{ certificate.description }}</p>
