@@ -24,6 +24,7 @@
             <div class="certification-description">
               <p>{{ certificate.description }}</p>
             </div>
+            <button class="view-button">View Certificate</button>
           </div>
         </template>
       </base-card>
@@ -144,6 +145,21 @@ h2 {
   margin-top: 0.5rem;
 }
 
+.view-button {
+  background-color: #40916c;
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+
+.view-button:hover {
+  background-color: #52b788;
+}
+
 @media (max-width: 768px) {
   h2 {
     font-size: 2.4rem;
@@ -196,6 +212,11 @@ h2 {
   .certification-description {
     font-size: 0.9rem;
   }
+
+  .view-button {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.2rem;
+  }
 }
 
 @media (max-width: 350px) {
@@ -222,6 +243,11 @@ h2 {
 
   .certification-description {
     font-size: 0.8rem;
+  }
+
+  .view-button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
   }
 }
 </style>
