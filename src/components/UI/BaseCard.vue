@@ -9,7 +9,7 @@
           <slot name="content"></slot>
         </div>
         <div class="technologies-logos">
-          <h4></h4>
+          <h4>Made with:</h4>
           <slot name="logos"></slot>
         </div>
         <div class="card-buttons">
