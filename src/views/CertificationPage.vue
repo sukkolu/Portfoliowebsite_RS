@@ -6,30 +6,32 @@
       <h2>Certifications</h2>
     </div>
     <div class="certification-container" v-if="show">
-      <base-card v-for="certificate in certificates" :key="certificate.id">
-        <template #image>
-          <img
-            :src="certificate.imageUrl"
-            :alt="`Image of ${certificate.name}`"
-            class="certification-image"
-          />
-        </template>
-        <template #content>
-          <div class="certification-details">
-            <div class="certification-name">{{ certificate.name }}</div>
-            <div class="certification-issuer">
-              Issuer: {{ certificate.issuer }}
+      <div class="scroll-container">
+        <base-card v-for="certificate in certificates" :key="certificate.id" class="certification-card">
+          <template #image>
+            <img
+              :src="certificate.imageUrl"
+              :alt="`Image of ${certificate.name}`"
+              class="certification-image"
+            />
+          </template>
+          <template #content>
+            <div class="certification-details">
+              <div class="certification-name">{{ certificate.name }}</div>
+              <div class="certification-issuer">
+                Issuer: {{ certificate.issuer }}
+              </div>
+              <div class="certification-date">Date: {{ certificate.date }}</div>
+              <div class="certification-description">
+                <p>{{ certificate.description }}</p>
+              </div>
             </div>
-            <div class="certification-date">Date: {{ certificate.date }}</div>
-            <div class="certification-description">
-              <p>{{ certificate.description }}</p>
-            </div>
-          </div>
-        </template>
-        <template #button-1>
-          <button class="view-button">View Certificate</button>
-        </template>
-      </base-card>
+          </template>
+          <template #button-1>
+            <button class="view-button">View Certificate</button>
+          </template>
+        </base-card>
+      </div>
     </div>
   </section>
 </template>
@@ -40,6 +42,8 @@ import useAnimation from '../mixins/animation';
 import BaseBackground from '../components/UI/BaseBackground.vue';
 import BaseCard from '../components/UI/BaseCard.vue';
 
+// Ensure to register components
+// Use import for assets
 const certificates = ref([
   {
     id: 1,
@@ -82,10 +86,10 @@ const { show } = useAnimation();
 }
 
 h2 {
-  font-size: 12.6rem;
-  letter-spacing: 3px;
-  text-shadow: 5px 5px #52b788;
-  padding-right: 1.2rem;
+  font-size: 3rem; /* Adjusted for better mobile view */
+  letter-spacing: 1px; /* Adjusted for better mobile view */
+  text-shadow: 2px 2px #52b788; /* Adjusted for better mobile view */
+  padding-right: 0.6rem; /* Adjusted for better mobile view */
 }
 
 .rectangle {
@@ -94,7 +98,7 @@ h2 {
   left: -1%;
   width: 100%;
   top: 10%;
-  height: 16rem;
+  height: 4rem; /* Adjusted for better mobile view */
   border-left: 10px solid #40916c;
   animation: moveRect 1s 1 cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
 }
@@ -110,11 +114,21 @@ h2 {
 }
 
 .certification-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
   width: 100%;
   margin-top: 2rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 0 1rem;
+}
+
+.scroll-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.certification-card {
+  flex: 0 0 auto;
+  width: 300px;
 }
 
 .certification-image {
@@ -161,11 +175,15 @@ h2 {
 
 @media (max-width: 768px) {
   h2 {
-    font-size: 9.6rem;
+    font-size: 2.4rem; /* Adjusted for better mobile view */
   }
 
   .rectangle {
-    height: 12rem;
+    height: 3rem; /* Adjusted for better mobile view */
+  }
+
+  .certification-card {
+    width: 250px; /* Adjusted for better mobile view */
   }
 
   .certification-name {
@@ -184,11 +202,15 @@ h2 {
 
 @media (max-width: 480px) {
   h2 {
-    font-size: 6.4rem;
+    font-size: 2rem; /* Adjusted for better mobile view */
   }
 
   .rectangle {
-    height: 10rem;
+    height: 2rem; /* Adjusted for better mobile view */
+  }
+
+  .certification-card {
+    width: 200px; /* Adjusted for better mobile view */
   }
 
   .certification-name {
@@ -207,11 +229,15 @@ h2 {
 
 @media (max-width: 350px) {
   h2 {
-    font-size: 4.8rem;
+    font-size: 1.6rem; /* Adjusted for better mobile view */
   }
 
   .rectangle {
-    height: 8rem;
+    height: 1.5rem; /* Adjusted for better mobile view */
+  }
+
+  .certification-card {
+    width: 150px; /* Adjusted for better mobile view */
   }
 
   .certification-name {
