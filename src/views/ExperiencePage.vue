@@ -1,13 +1,11 @@
 <template>
   <section class="experience-section">
     <base-background></base-background>
-    <div class="experience-header">
-      <div class="experience-title-container">
-        <div class="rectangle" v-if="show"></div>
-        <h2>Experience</h2>
-      </div>
+    <div class="experience-title-container">
+      <div class="rectangle" v-if="show"></div>
+      <h2>Experience</h2>
     </div>
-    <div class="experience-container" :class="{ show: show }">
+    <div class="experience-container" v-if="show">
       <base-card v-for="experience in experiences" :key="experience.id">
         <template #image>
           <img
@@ -43,7 +41,7 @@ export default {
   name: 'ExperienceSection',
   components: {
     'base-background': BaseBackground,
-    'base-card': BaseCard,
+    'base-card': BaseCard
   },
   setup() {
     const show = useAnimation();
@@ -87,39 +85,35 @@ export default {
   display: grid;
   justify-items: center;
   justify-content: center;
-  grid-template-rows: 1fr 0.5fr 3.5fr;
-  gap: 9.6rem;
-  overflow: hidden;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 0.5fr 3.5fr;
+  padding-bottom: 9.6rem;
+  row-gap: 4.8rem;
   position: relative;
   color: #dee2e6;
 }
-
-.experience-header {
-  margin-top: 6.4rem;
-  display: flex;
-  gap: 6.4rem;
-  align-items: center;
+.experience-title-container {
+  margin-top: 2.4rem;
+  position: relative;
+  grid-column: 1/-1;
 }
-
 h2 {
-  font-size: 12.6rem;
-  color: #dee2e6;
-  letter-spacing: 3px;
-  text-shadow: 5px 5px #52b788;
+  font-size: 3.2rem;
+  letter-spacing: 0.1rem;
+  text-shadow: 2px 2px #52b788;
   padding-right: 1.2rem;
 }
-
 .rectangle {
   background: #333533;
   position: absolute;
   left: -1%;
   width: 100%;
   top: 10%;
-  height: 14rem;
-  border-left: 10px solid #40916c;
+  height: 2rem;
+  border-left: 5px solid #40916c;
   animation: moveRect 1s 1 cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+  overflow-x: auto; /* Enable horizontal scrolling */
 }
-
 @keyframes moveRect {
   0% {
     left: 0;
@@ -129,7 +123,6 @@ h2 {
     width: 1%;
   }
 }
-
 .experience-container {
   grid-column: 1/-1;
   display: flex;
@@ -137,228 +130,49 @@ h2 {
   gap: 3.2rem;
   overflow-x: auto; /* Enable horizontal scrolling */
 }
-
 .company-logo {
   width: 8rem;
   height: 8rem;
   border-radius: 50%;
   border: 5px solid #40916c;
 }
-
 .company-details {
   display: flex;
   flex-direction: column;
 }
-
 .company-name {
-  font-size: 4rem;
+  font-size: 3rem;
   color: #52b788;
 }
-
 .company-role {
-  font-size: 3.2rem;
-}
-
-.company-duration {
   font-size: 2.4rem;
+}
+.company-duration {
+  font-size: 2rem;
   color: #a9a9a9;
 }
-
 .company-description {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-top: 1rem;
 }
-
-/* Responsive Design Adjustments */
-@media (max-width: 1220px) {
+@media (max-width: 1550px) {
   .experience-section {
-    grid-template-rows: 1fr 0.5fr 3fr;
+    grid-template-columns: 1fr;
+    row-gap: 4.2rem;
   }
-
   h2 {
     font-size: 9.6rem;
   }
-
+  .rectangle {
+    height: 12rem;
+  }
+}
+@media (max-width: 992px) {
+  h2 {
+    font-size: 8rem;
+  }
   .rectangle {
     height: 10rem;
-  }
-
-  .company-name {
-    font-size: 3.2rem;
-  }
-
-  .company-role {
-    font-size: 2.4rem;
-  }
-
-  .company-duration {
-    font-size: 2rem;
-  }
-
-  .company-description {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width: 992px) {
-  .experience-section {
-    gap: 4.8rem;
-  }
-
-  h2 {
-    font-size: 7.8rem;
-  }
-
-  .rectangle {
-    height: 8rem;
-  }
-
-  .company-name {
-    font-size: 2.4rem;
-  }
-
-  .company-role {
-    font-size: 2rem;
-  }
-
-  .company-duration {
-    font-size: 1.6rem;
-  }
-
-  .company-description {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .experience-title-container {
-    margin-top: 2.4rem;
-  }
-
-  h2 {
-    font-size: 6.4rem;
-  }
-
-  .rectangle {
-    height: 6rem;
-  }
-
-  .company-logo {
-    width: 6rem;
-    height: 6rem;
-  }
-
-  .company-name {
-    font-size: 2rem;
-  }
-
-  .company-role {
-    font-size: 1.6rem;
-  }
-
-  .company-duration {
-    font-size: 1.4rem;
-  }
-
-  .company-description {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 580px) {
-  .experience-title-container {
-    margin-top: 1.2rem;
-  }
-
-  h2 {
-    font-size: 5.2rem;
-  }
-
-  .rectangle {
-    height: 5rem;
-  }
-
-  .company-logo {
-    width: 5rem;
-    height: 5rem;
-  }
-
-  .company-name {
-    font-size: 1.6rem;
-  }
-
-  .company-role {
-    font-size: 1.4rem;
-  }
-
-  .company-duration {
-    font-size: 1.2rem;
-  }
-
-  .company-description {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  h2 {
-    font-size: 3.8rem;
-  }
-
-  .rectangle {
-    height: 4rem;
-  }
-
-  .company-logo {
-    width: 4rem;
-    height: 4rem;
-  }
-
-  .company-name {
-    font-size: 1.4rem;
-  }
-
-  .company-role {
-    font-size: 1.2rem;
-  }
-
-  .company-duration {
-    font-size: 1rem;
-  }
-
-  .company-description {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 350px) {
-  h2 {
-    font-size: 3.2rem;
-  }
-
-  .rectangle {
-    height: 3rem;
-  }
-
-  .company-logo {
-    width: 3rem;
-    height: 3rem;
-  }
-
-  .company-name {
-    font-size: 1.2rem;
-  }
-
-  .company-role {
-    font-size: 1rem;
-  }
-
-  .company-duration {
-    font-size: 0.8rem;
-  }
-
-  .company-description {
-    font-size: 0.7rem;
   }
 }
 </style>
