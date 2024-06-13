@@ -86,16 +86,18 @@ export default {
   justify-items: center;
   justify-content: center;
   grid-template-rows: auto;
-  grid-template-columns: 1fr 0.5fr 3.5fr;
+  grid-template-columns: 1fr;
   padding-bottom: 9.6rem;
   row-gap: 4.8rem;
   position: relative;
   color: #dee2e6;
+  padding-top: 4.8rem; /* Adjust top padding for better spacing */
 }
 .experience-title-container {
   margin-top: 2.4rem;
   position: relative;
-  grid-column: 1/-1;
+  grid-column: 1;
+  text-align: center; /* Center align the title */
 }
 h2 {
   font-size: 3.2rem;
@@ -106,7 +108,8 @@ h2 {
 .rectangle {
   background: #333533;
   position: absolute;
-  left: -1%;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
   top: 10%;
   height: 2rem;
@@ -124,11 +127,12 @@ h2 {
   }
 }
 .experience-container {
-  grid-column: 1/-1;
+  grid-column: 1;
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: column; /* Adjust to column layout for mobile */
+  align-items: center; /* Center align content */
   gap: 3.2rem;
-  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-x: hidden; /* Hide horizontal overflow on smaller screens */
 }
 .company-logo {
   width: 8rem;
@@ -137,42 +141,80 @@ h2 {
   border: 5px solid #40916c;
 }
 .company-details {
-  display: flex;
-  flex-direction: column;
+  text-align: center; /* Center align company details */
 }
 .company-name {
-  font-size: 3rem;
+  font-size: 2.4rem; /* Reduce font size for better fit */
   color: #52b788;
 }
 .company-role {
-  font-size: 2.4rem;
+  font-size: 1.8rem; /* Reduce font size for better fit */
 }
 .company-duration {
-  font-size: 2rem;
+  font-size: 1.6rem; /* Reduce font size for better fit */
   color: #a9a9a9;
 }
 .company-description {
-  font-size: 1.8rem;
+  font-size: 1.4rem; /* Reduce font size for better fit */
   margin-top: 1rem;
-}
-@media (max-width: 1550px) {
-  .experience-section {
-    grid-template-columns: 1fr;
-    row-gap: 4.2rem;
-  }
-  h2 {
-    font-size: 9.6rem;
-  }
-  .rectangle {
-    height: 12rem;
-  }
+  text-align: justify; /* Justify text for better readability */
 }
 @media (max-width: 992px) {
   h2 {
-    font-size: 8rem;
+    font-size: 2.4rem; /* Adjust font size for smaller screens */
   }
   .rectangle {
-    height: 10rem;
+    height: 1.5rem; /* Adjust height for smaller screens */
+  }
+  .experience-container {
+    padding: 0 1.6rem; /* Add padding for better spacing */
+  }
+  .company-logo {
+    width: 6rem; /* Adjust logo size for smaller screens */
+    height: 6rem;
+  }
+  .company-name {
+    font-size: 2rem; /* Further reduce font size for smaller screens */
+  }
+  .company-role {
+    font-size: 1.6rem; /* Further reduce font size for smaller screens */
+  }
+  .company-duration {
+    font-size: 1.4rem; /* Further reduce font size for smaller screens */
+  }
+  .company-description {
+    font-size: 1.2rem; /* Further reduce font size for smaller screens */
+  }
+}
+@media (max-width: 768px) {
+  .experience-title-container {
+    margin-top: 1.6rem; /* Adjust top margin for smaller screens */
+  }
+  h2 {
+    font-size: 2rem; /* Further reduce font size for smaller screens */
+  }
+  .rectangle {
+    height: 1.2rem; /* Adjust height for smaller screens */
+  }
+  .experience-container {
+    padding: 0 1rem; /* Adjust padding for smaller screens */
+    gap: 2rem; /* Adjust gap for smaller screens */
+  }
+  .company-logo {
+    width: 5rem; /* Further adjust logo size for smaller screens */
+    height: 5rem;
+  }
+  .company-name {
+    font-size: 1.8rem; /* Further reduce font size for smaller screens */
+  }
+  .company-role {
+    font-size: 1.4rem; /* Further reduce font size for smaller screens */
+  }
+  .company-duration {
+    font-size: 1.2rem; /* Further reduce font size for smaller screens */
+  }
+  .company-description {
+    font-size: 1rem; /* Further reduce font size for smaller screens */
   }
 }
 </style>
