@@ -24,7 +24,7 @@
             <div class="certification-description">
               <p>{{ certificate.description }}</p>
             </div>
-            <button class="view-button">View Certificate</button>
+            <button class="view-button" @click="viewCertificate(certificate.url)">View Certificate</button>
           </div>
         </template>
       </base-card>
@@ -46,6 +46,7 @@ const certificates = ref([
     date: '7th May 2024',
     description:
       'Completed a comprehensive course on Data Analysis with Python, covering various libraries and techniques for effective data handling.',
+    url: 'https://drive.google.com/file/d/1k6__S8e0InhA-7g_nhSBroFvr08X0Iy4/view?usp=drive_link', // Replace with actual URL
   },
   {
     id: 2,
@@ -55,10 +56,15 @@ const certificates = ref([
     date: '30th September 2023',
     description:
       'Completed the Nanodegree program in Data Analysis, learning advanced techniques and tools such as SQL, Excel, and Power BI.',
+    url: 'https://drive.google.com/file/d/13IckWcIjudGr-QNyfCXO_JU44QLwAhZ5/view?usp=drive_link', // Replace with actual URL
   },
 ]);
 
 const { show } = useAnimation();
+
+const viewCertificate = (url) => {
+  window.open(url, '_blank');
+};
 </script>
 <style scoped>
 .certificate-section {
