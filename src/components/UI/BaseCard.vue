@@ -54,6 +54,9 @@ export default {
   position: relative;
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+  background-color: #333533;
+  color: #dee2e6;
+  border-radius: 1rem;
 }
 
 .card-container:hover {
@@ -89,6 +92,7 @@ export default {
 
 .card-content h4 {
   font-size: 3.6rem;
+  color: #52b788;
 }
 
 .technologies-logos {
