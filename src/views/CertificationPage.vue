@@ -17,9 +17,7 @@
         <template #content>
           <div class="certification-details">
             <div class="certification-name">{{ certificate.name }}</div>
-            <div class="certification-issuer">
-              Issuer: {{ certificate.issuer }}
-            </div>
+            <div class="certification-issuer">Issuer: {{ certificate.issuer }}</div>
             <div class="certification-date">Date: {{ certificate.date }}</div>
             <div class="certification-description">
               <p>{{ certificate.description }}</p>
@@ -31,6 +29,7 @@
     </div>
   </section>
 </template>
+
 <script setup>
 import { ref } from 'vue';
 import useAnimation from '../mixins/animation';
@@ -66,6 +65,7 @@ const viewCertificate = (url) => {
   window.open(url, '_blank');
 };
 </script>
+
 <style scoped>
 .certificate-section {
   width: 100%;
@@ -164,20 +164,17 @@ h2 {
   background-color: #52b788;
 }
 
-/* Responsive styles */
-@media (max-width: 1220px) {
-  .certificate-section {
-    padding: 1rem;
-  }
-}
-
-@media (max-width: 1140px) {
+@media (max-width: 768px) {
   h2 {
     font-size: 2.4rem;
   }
 
+  .rectangle {
+    height: 2.4rem;
+  }
+
   .certification-container {
-    padding: 0 1.5rem;
+    padding: 0 2rem;
   }
 
   .certification-name {
@@ -192,24 +189,19 @@ h2 {
   .certification-description {
     font-size: 1rem;
   }
-
-  .view-button {
-    font-size: 1.2rem;
-    padding: 0.6rem 1.2rem;
-  }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 480px) {
   h2 {
     font-size: 2rem;
   }
 
   .rectangle {
-    height: 2.4rem;
+    height: 2rem;
   }
 
   .certification-container {
-    padding: 0 1.2rem;
+    padding: 0 1.5rem;
   }
 
   .certification-name {
@@ -218,7 +210,7 @@ h2 {
 
   .certification-issuer,
   .certification-date {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .certification-description {
@@ -231,39 +223,7 @@ h2 {
   }
 }
 
-@media (max-width: 768px) {
-  h2 {
-    font-size: 1.8rem;
-  }
-
-  .rectangle {
-    height: 2rem;
-  }
-
-  .certification-container {
-    padding: 0 1rem;
-  }
-
-  .certification-name {
-    font-size: 1.4rem;
-  }
-
-  .certification-issuer,
-  .certification-date {
-    font-size: 1.2rem;
-  }
-
-  .certification-description {
-    font-size: 0.8rem;
-  }
-
-  .view-button {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-  }
-}
-
-@media (max-width: 580px) {
+@media (max-width: 350px) {
   h2 {
     font-size: 1.6rem;
   }
@@ -273,7 +233,7 @@ h2 {
   }
 
   .certification-container {
-    padding: 0 0.8rem;
+    padding: 0 1rem;
   }
 
   .certification-name {
@@ -282,7 +242,7 @@ h2 {
 
   .certification-issuer,
   .certification-date {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .certification-description {
@@ -290,72 +250,8 @@ h2 {
   }
 
   .view-button {
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 0.5rem 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  .rectangle {
-    height: 1.4rem;
-  }
-
-  .certification-container {
-    padding: 0 0.6rem;
-  }
-
-  .certification-name {
-    font-size: 1.2rem;
-  }
-
-  .certification-issuer,
-  .certification-date {
-    font-size: 0.8rem;
-  }
-
-  .certification-description {
-    font-size: 0.7rem;
-  }
-
-  .view-button {
-    font-size: 0.8rem;
-    padding: 0.4rem 0.8rem;
-  }
-}
-
-@media (max-width: 350px) {
-  h2 {
-    font-size: 1.2rem;
-  }
-
-  .rectangle {
-    height: 1.2rem;
-  }
-
-  .certification-container {
-    padding: 0 0.4rem;
-  }
-
-  .certification-name {
-    font-size: 1rem;
-  }
-
-  .certification-issuer,
-  .certification-date {
-    font-size: 0.7rem;
-  }
-
-  .certification-description {
-    font-size: 0.6rem;
-  }
-
-  .view-button {
-    font-size: 0.7rem;
-    padding: 0.4rem 0.8rem;
   }
 }
 </style>
