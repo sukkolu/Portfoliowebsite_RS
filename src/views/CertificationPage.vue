@@ -31,30 +31,12 @@
   </section>
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue';
 import useAnimation from '../mixins/animation';
-import SkillsSection from '../components/about/SkillsSection.vue';
+import BaseBackground from '../components/UI/BaseBackground.vue';
+import BaseCard from '../components/UI/BaseCard.vue';
 
-export default {
-  components: {
-    SkillsSection,
-  },
-  setup() {
-    const show = useAnimation()
-    const scale = ref(0)
-    if (show === false) {
-      scale.value = 0
-    } else {
-      scale.value = 1
-    }
-    return { show, scale }
-  }
-}
-</script>
-
-// Ensure to register components
-// Use import for assets
 const certificates = ref([
   {
     id: 1,
@@ -76,6 +58,7 @@ const certificates = ref([
   },
 ]);
 
+const { show } = useAnimation();
 </script>
 
 <style scoped>
@@ -96,10 +79,11 @@ const certificates = ref([
 }
 
 h2 {
-  font-size: 12.6rem;
-  letter-spacing: 3px;
-  text-shadow: 5px 5px #52b788;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px #52b788;
   padding-right: 1.2rem;
+  margin: 0;
 }
 
 .rectangle {
@@ -108,7 +92,7 @@ h2 {
   left: -1%;
   width: 100%;
   top: 10%;
-  height: 16rem;
+  height: 3.5rem;
   border-left: 10px solid #40916c;
   animation: moveRect 1s 1 cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
 }
@@ -129,6 +113,7 @@ h2 {
   gap: 2rem;
   width: 100%;
   margin-top: 2rem;
+  padding: 0 1rem;
 }
 
 .certification-image {
@@ -161,11 +146,15 @@ h2 {
 
 @media (max-width: 768px) {
   h2 {
-    font-size: 9.6rem;
+    font-size: 2.4rem;
   }
 
   .rectangle {
-    height: 12rem;
+    height: 2.4rem;
+  }
+
+  .certification-container {
+    padding: 0 2rem;
   }
 
   .certification-name {
@@ -184,11 +173,15 @@ h2 {
 
 @media (max-width: 480px) {
   h2 {
-    font-size: 8rem;
+    font-size: 2rem;
   }
 
   .rectangle {
-    height: 10rem;
+    height: 2rem;
+  }
+
+  .certification-container {
+    padding: 0 1.5rem;
   }
 
   .certification-name {
@@ -207,11 +200,15 @@ h2 {
 
 @media (max-width: 350px) {
   h2 {
-    font-size: 6.4rem;
+    font-size: 1.6rem;
   }
 
   .rectangle {
-    height: 8rem;
+    height: 1.6rem;
+  }
+
+  .certification-container {
+    padding: 0 1rem;
   }
 
   .certification-name {
